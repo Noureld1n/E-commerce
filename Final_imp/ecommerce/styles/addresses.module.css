@@ -1,0 +1,266 @@
+.addressesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.addressesHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.backButton:hover {
+  background: #e0e0e0;
+}
+
+.addressesContent {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.addressesActions {
+  margin-bottom: 2rem;
+}
+
+.addAddressBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.addAddressBtn:hover {
+  background: #357abd;
+}
+
+.addressFormSection {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.formHeader {
+  margin-bottom: 1.5rem;
+}
+
+.addressForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.formRow .formGroup {
+  flex: 1;
+}
+
+.formInput {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.formInput:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancelBtn {
+  padding: 0.75rem 1.5rem;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancelBtn:hover {
+  background: #e0e0e0;
+}
+
+.saveBtn {
+  padding: 0.75rem 1.5rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.saveBtn:hover {
+  background: #357abd;
+}
+
+.saveBtn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.addressesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.addressCard {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.addressCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.addressCard.default {
+  border: 2px solid #4a90e2;
+}
+
+.addressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.addressType {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.defaultBadge {
+  background: #4a90e2;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.addressActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editAddressBtn,
+.deleteAddressBtn,
+.setDefaultBtn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editAddressBtn {
+  background: #f0f0f0;
+}
+
+.editAddressBtn:hover {
+  background: #e0e0e0;
+}
+
+.deleteAddressBtn {
+  background: #fff0f0;
+  color: #dc3545;
+}
+
+.deleteAddressBtn:hover {
+  background: #ffe0e0;
+}
+
+.setDefaultBtn {
+  background: #f0f8ff;
+  color: #4a90e2;
+  padding: 0.5rem 1rem;
+}
+
+.setDefaultBtn:hover {
+  background: #e0f0ff;
+}
+
+.addressDetails {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.addressDetails p {
+  margin: 0.25rem 0;
+}
+
+.noAddresses {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+}
+
+.noAddresses h3 {
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}

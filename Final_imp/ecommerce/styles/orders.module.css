@@ -1,0 +1,302 @@
+.ordersContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.ordersHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.backButton:hover {
+  background: #e0e0e0;
+}
+
+.ordersContent {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.noOrders {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.noOrders h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.noOrders p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.shopNowBtn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.shopNowBtn:hover {
+  background: #357abd;
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.orderCard {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.orderCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.orderHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.orderInfo h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.orderDate {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.statusBadge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.orderItems {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.orderItem {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.orderItemImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.orderItemDetails {
+  flex: 1;
+}
+
+.orderItemDetails h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.orderItemDetails p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+.itemPrice {
+  font-weight: 500;
+  color: #333;
+}
+
+.moreItems {
+  text-align: center;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.orderFooter {
+  padding: 1.5rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.orderTotal {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.orderActions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.viewOrderBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.viewOrderBtn:hover {
+  background: #357abd;
+}
+
+.cancelOrderBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #e74c3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cancelOrderBtn:hover:not(:disabled) {
+  background: #c0392b;
+}
+
+.cancelOrderBtn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ordersContainer {
+    padding: 1rem;
+  }
+
+  .ordersHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .ordersHeader h1 {
+    font-size: 1.5rem;
+  }
+
+  .orderCard {
+    margin-bottom: 1rem;
+  }
+
+  .orderHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .orderInfo h3 {
+    font-size: 1rem;
+  }
+
+  .orderFooter {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .orderActions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .viewOrderBtn,
+  .cancelOrderBtn {
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+  }
+
+  .orderItem {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .orderItemImage {
+    width: 60px;
+    height: 60px;
+    align-self: center;
+  }
+
+  .orderItemDetails {
+    text-align: center;
+  }
+}

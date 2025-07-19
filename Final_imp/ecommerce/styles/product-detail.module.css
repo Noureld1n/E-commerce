@@ -1,0 +1,91 @@
+/* Product detail page module styles */
+
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.productHeader h1 {
+  margin: 0;
+  padding-right: 50px; /* Space for the wishlist button */
+}
+
+/* Wishlist button styling */
+.productDetailWishlistBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  color: #f02d34;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.productDetailWishlistBtn:hover {
+  transform: scale(1.15);
+  background-color: rgba(240, 45, 52, 0.1);
+}
+
+.productDetailWishlistBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Price and stock container */
+.priceStockContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.priceStockContainer p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 26px;
+  color: #f02d34;
+}
+
+.quantityInStock {
+  font-size: 15px;
+  color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Adjust the product detail container for responsive layout */
+@media screen and (max-width: 800px) {
+  .productHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .productDetailWishlistBtn {
+    position: relative;
+    top: auto;
+    right: auto;
+    align-self: flex-end;
+    margin-top: -30px;
+  }
+  
+  .priceStockContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
